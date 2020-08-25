@@ -241,7 +241,11 @@ declare namespace WechatMiniprogram {
              *
              * 最低基础库： 2.11.0
              */
-            onThemeChange: OnThemeChangeCallback
+            onThemeChange: OnThemeChangeCallback,
+
+            readonly globalData?: {
+                readonly [key: string]: any,
+            },
         }
 
         type Instance<T extends IAnyObject> = Option & T

@@ -14100,7 +14100,7 @@ wx.openSetting({
 *
 * 最低基础库： `1.1.0` */
         openSetting<TOption extends OpenSettingOption>(
-            option: TOption
+            option?: TOption
         ): PromisifySuccessResult<TOption, OpenSettingOption>
         /** [wx.openVideoEditor(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/video/wx.openVideoEditor.html)
          *

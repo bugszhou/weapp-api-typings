@@ -60,7 +60,8 @@ declare namespace WechatMiniprogram {
             Partial<Lifetimes> &
             ThisType<
                 Instance<TData, TProperty, TMethod, TCustomInstanceProperty>
-            >
+            > &
+            TCustomInstanceProperty
         interface Constructor {
             <
                 TData extends DataOption,
@@ -322,6 +323,8 @@ declare namespace WechatMiniprogram {
             unlinked?(target: TrivialInstance): void
             /** 如果这一项被设置，则它表示关联的目标节点所应具有的behavior，所有拥有这一behavior的组件节点都会被关联 */
             target?: string
+            /** 自定义属性 */
+            [key: string]: any
         }
 
         interface PageLifetimes {

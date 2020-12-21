@@ -4922,7 +4922,7 @@ innerAudioContext.onError((res) => {
     }
     interface ShowLoadingOption {
         /** 提示的内容 */
-        title: string
+        title?: string
         /** 接口调用结束的回调函数（调用成功、失败都会执行） */
         complete?: ShowLoadingCompleteCallback
         /** 接口调用失败的回调函数 */
@@ -15173,7 +15173,7 @@ wx.showShareMenu({
 *
 * 最低基础库： `1.1.0` */
         showShareMenu<TOption extends ShowShareMenuOption>(
-            option: TOption
+            option?: TOption
         ): PromisifySuccessResult<TOption, ShowShareMenuOption>
         /** [wx.showTabBar(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/tab-bar/wx.showTabBar.html)
          *

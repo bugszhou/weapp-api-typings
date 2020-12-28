@@ -179,7 +179,8 @@ declare namespace WechatMiniprogram {
                  *
                  * 其中 `key` 可以以数据路径的形式给出，支持改变数组中的某一项或对象的某个属性，如 `array[2].message`，`a.b.c.d`，并且不需要在 this.data 中预先定义。
                  */
-                data: Partial<D> & IAnyObject,
+                // data: Partial<D> & IAnyObject,
+                data: Partial<D>,
                 /** setData引起的界面更新渲染完毕后的回调函数，最低基础库： `1.5.0` */
                 callback?: () => void
             ): void

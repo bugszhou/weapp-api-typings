@@ -1,6 +1,6 @@
 {
   "name": "weapp-api-typings",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "weapp TS api typings",
   "main": "./index.d.ts",
   "types": "./index.d.ts",

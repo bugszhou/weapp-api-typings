@@ -1,6 +1,6 @@
 # 需要覆盖的 interface
 
-## Component
+## Component - `(lib.wx.component.d.ts)`
 
 ```javascript
 type Options<
@@ -24,4 +24,21 @@ type Options<
                 TIsPage
             >
         >
+```
+
+## ShowLoadingOption - `(lib.wx.api.d.ts)`
+
+```javascript
+    interface ShowLoadingOption {
+        /** 提示的内容 */
++        title?: string
+        /** 接口调用结束的回调函数（调用成功、失败都会执行） */
+        complete?: ShowLoadingCompleteCallback
+        /** 接口调用失败的回调函数 */
+        fail?: ShowLoadingFailCallback
+        /** 是否显示透明蒙层，防止触摸穿透 */
+        mask?: boolean
+        /** 接口调用成功的回调函数 */
+        success?: ShowLoadingSuccessCallback
+    }
 ```

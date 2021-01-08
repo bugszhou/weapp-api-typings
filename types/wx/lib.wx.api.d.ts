@@ -5088,7 +5088,7 @@ innerAudioContext.onError((res) => {
     }
     interface ShowLoadingOption {
         /** 提示的内容 */
-        title: string
+        title?: string
         /** 接口调用结束的回调函数（调用成功、失败都会执行） */
         complete?: ShowLoadingCompleteCallback
         /** 接口调用失败的回调函数 */

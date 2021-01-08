@@ -55,6 +55,7 @@ declare namespace WechatMiniprogram.Component {
         Partial<Method<TMethod, TIsPage>> &
         Partial<OtherOption> &
         Partial<Lifetimes> &
+        Partial<TCustomInstanceProperty> &
         ThisType<
             Instance<
                 TData,

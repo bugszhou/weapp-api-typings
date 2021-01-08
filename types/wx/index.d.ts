@@ -45,6 +45,7 @@ declare namespace WechatMiniprogram {
     ? void
     : Promise<Parameters<Exclude<T["success"], undefined>>[0]>;
 }
+declare const wx: WechatMiniprogram.Wx
 
 /** 引入插件。返回插件通过 `main` 暴露的接口。 */
 declare function requirePlugin(

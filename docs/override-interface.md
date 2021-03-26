@@ -1,5 +1,13 @@
 # 需要覆盖的 interface
 
+## 删除 interface
+
+### index.d.ts
+
+```javascript
+declare const console: WechatMiniprogram.Console
+```
+
 ## Component - `(lib.wx.component.d.ts)`
 
 ```javascript

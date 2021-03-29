@@ -6,6 +6,9 @@
 
 ```javascript
 declare const console: WechatMiniprogram.Console
+declare function require()
+declare let module: {}
+declare let exports: any
 ```
 
 ## Component - `(lib.wx.component.d.ts)`

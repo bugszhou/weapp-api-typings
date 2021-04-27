@@ -4430,6 +4430,30 @@ innerAudioContext.onError((res) => {
         /** 接口调用成功的回调函数 */
         success?: RequestPictureInPictureSuccessCallback
     }
+    interface OpenOfflinePayViewOption {
+        /** 公众平台 appid */
+        appId: string
+        /** 随机字符串，长度为32个字符以下 */
+        nonceStr: string
+        /** 统一下单接口返回的 prepay_id 参数值，提交格式如：prepay_id=*** */
+        package: string
+        /** 签名，具体签名方案参见 [小程序支付接口文档](https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_7&index=3) */
+        paySign: string
+        /** 时间戳，从 1970 年 1 月 1 日 00:00:00 至今的秒数，即当前的时间 */
+        timeStamp: string
+        /** 接口调用结束的回调函数（调用成功、失败都会执行） */
+        complete?: any
+        /** 接口调用失败的回调函数 */
+        fail?: any
+        /** 签名算法
+         *
+         * 可选值：
+         * - 'MD5': MD5;
+         * - 'HMAC-SHA256': HMAC-SHA256; */
+        signType?: 'MD5' | 'HMAC-SHA256'
+        /** 接口调用成功的回调函数 */
+        success?: any
+    }
     /** 网络请求过程中一些调试信息
      *
      * 最低基础库： `2.10.4` */
@@ -15609,6 +15633,28 @@ wx.cloud.callFunction({
         requestPayment<T extends RequestPaymentOption = RequestPaymentOption>(
             option: T
         ): PromisifySuccessResult<T, RequestPaymentOption>
+/** [wx.openOfflinePayView(Object object)]
+*
+* 打开微信付款码页面，接口未对外公开，需要找微信支付团队申请开通权限
+*
+* **示例代码**
+*
+*
+* ```js
+wx.openOfflinePayView({
+  appId: '',
+  timeStamp: '',
+  nonceStr: '',
+  package: '',
+  signType: 'MD5',
+  paySign: '',
+  success (res) { },
+  fail (err) { }
+})
+``` */
+openOfflinePayView<TOption extends OpenOfflinePayViewOption>(
+    option: TOption
+): PromisifySuccessResult<TOption, OpenOfflinePayViewOption>
         /** [wx.requestSubscribeMessage(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/subscribe-message/wx.requestSubscribeMessage.html)
 *
 * 调起客户端小程序订阅消息界面，返回用户订阅消息的操作结果。当用户勾选了订阅面板中的“总是保持以上选择，不再询问”时，模板消息会被添加到用户的小程序设置页，通过 [wx.getSetting](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/setting/wx.getSetting.html) 接口可获取用户对相关模板消息的订阅状态。

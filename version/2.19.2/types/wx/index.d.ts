@@ -128,7 +128,10 @@ declare let console: WechatMiniprogram.Console
 
 declare let wx: WechatMiniprogram.Wx
 /** 引入模块。返回模块通过 `module.exports` 或 `exports` 暴露的接口。 */
-
+declare function require(
+    /** 需要引入模块文件相对于当前文件的相对路径，或 npm 模块名，或 npm 模块路径。不支持绝对路径 */
+    module: string
+): any
 /** 引入插件。返回插件通过 `main` 暴露的接口。 */
 declare function requirePlugin(
     /** 需要引入的插件的 alias */

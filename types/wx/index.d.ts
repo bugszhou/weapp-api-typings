@@ -124,8 +124,6 @@ declare namespace WechatMiniprogram {
     type AudioListener = any
 }
 
-declare let console: WechatMiniprogram.Console
-
 declare let wx: WechatMiniprogram.Wx
 /** 引入模块。返回模块通过 `module.exports` 或 `exports` 暴露的接口。 */
 
@@ -140,13 +138,6 @@ declare function requirePlugin(
  *
  * 最低基础库： `2.11.1` */
 declare function requireMiniProgram(): any
-/** 当前模块对象 */
-declare let module: {
-    /** 模块向外暴露的对象，使用 `require` 引用该模块时可以获取 */
-    exports: any
-}
-/** `module.exports` 的引用 */
-declare let exports: any
 
 /** [clearInterval(number intervalID)](https://developers.weixin.qq.com/miniprogram/dev/api/base/timer/clearInterval.html)
  *

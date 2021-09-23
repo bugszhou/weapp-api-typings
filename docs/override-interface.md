@@ -5,7 +5,7 @@
 ### index.d.ts
 
 ```javascript
-declare const console: WechatMiniprogram.Console // 目前可以不用删除了
+declare const console: WechatMiniprogram.Console
 declare function require()
 declare let module: {}
 declare let exports: any

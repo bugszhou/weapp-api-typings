@@ -1,0 +1,17 @@
+.DS_Store
+.editorconfig
+.idea
+.bat
+.scannerwork
+node_modules/
+getready/
+resource/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+selenium-debug.log*
+.history/
+__ui_tests__/outputs
+__ui_tests__/case/__pycache__
+__ui_tests__/config.json

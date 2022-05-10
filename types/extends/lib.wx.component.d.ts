@@ -14,4 +14,6 @@ declare namespace WechatMiniprogram.Component {
     ThisType<
       Instance<TData, TProperty, TMethod, TCustomInstanceProperty, TIsPage>
     >;
+
+  type FullPropertyToData<T extends AllFullProperty> = T['value'];
 }

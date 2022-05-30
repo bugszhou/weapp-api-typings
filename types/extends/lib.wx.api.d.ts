@@ -60,5 +60,34 @@ declare namespace WechatMiniprogram {
     openOfflinePayView<TOption extends OpenOfflinePayViewOption>(
       option: TOption,
     ): PromisifySuccessResult<TOption, OpenOfflinePayViewOption>;
+
+    /** [wx.showLoading(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showLoading.html)
+      *
+      * 需要基础库： `1.1.0`
+      *
+      * 在插件中使用：需要基础库 `1.9.6`
+      *
+      * 显示 loading 提示框。需主动调用 wx.hideLoading 才能关闭提示框
+      *
+      * **示例代码**
+      *
+      * ```js
+      wx.showLoading({
+        title: '加载中',
+      })
+
+      setTimeout(function () {
+        wx.hideLoading()
+      }, 2000)
+      ```
+      *
+      * **注意**
+      *
+      * - [wx.showLoading](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showLoading.html) 和 [wx.showToast](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showToast.html) 同时只能显示一个
+      * - [wx.showLoading](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showLoading.html) 应与 [wx.hideLoading](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.hideLoading.html) 配对使用 
+    */
+    showLoading<T extends ShowLoadingOption = ShowLoadingOption>(
+      option?: T,
+    ): PromisifySuccessResult<T, ShowLoadingOption>;
   }
 }
